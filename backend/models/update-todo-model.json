@@ -7,7 +7,10 @@
       "type": "string"
     },
     "dueDate": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9]+",
+      "minLength": 3
+
     },
     "done": {
       "type": "boolean"

@@ -6,7 +6,9 @@ service: serverless-app
 plugins:
   - serverless-webpack
   - serverless-iam-roles-per-function
+  - serverless-reqvalidator-plugin
   #- serverless-plugin-tracing
+
 
 provider:
   name: aws
@@ -61,7 +63,7 @@ custom:
             - dueDate
           properties:
             name:
-              minLength: 1
+              minLength: 3
               type: string
             dueDate:
               type: string
@@ -74,7 +76,7 @@ custom:
             - done
           properties:
             name:
-              minLength: 1
+              minLength: 3
               type: string
             dueDate:
               type: string
